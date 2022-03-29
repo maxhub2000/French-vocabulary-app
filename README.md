@@ -1,2 +1,2 @@
 # French-vocabulary-app
-Mobile application that is meant to improve my French vocabulary
+Mobile application that is meant to improve my French vocabulary.
