@@ -5,11 +5,10 @@ import { Text, StyleSheet, View, Button, TouchableOpacity, Pressable  } from 're
 
 const HomeScreen = ({ navigation }) => {
   const main_title = "Start training"
-  const onPress_Training= () => navigation.navigate('Training')
+  const onPress_TrainingScreen= () => navigation.navigate('Training')
 
   return (
     <View>
-
       <View>
         <Text style={styles.text}>French Vocabulary training</Text>
         
@@ -26,8 +25,12 @@ const HomeScreen = ({ navigation }) => {
       </View>
     
       <View style={styles.view_button}>
-        <Pressable style={styles.button} onPress= {onPress_Training}>
+        <Pressable style={styles.button} onPress= {onPress_TrainingScreen}>
           <Text style={styles.text_button}>{main_title}</Text>
+        </Pressable>
+
+        <Pressable style={styles.button} onPress= {() => navigation.navigate('ChooseCollection')}>
+          <Text style={styles.text_button}>Choose collection</Text>
         </Pressable>
       </View>
     </View>
@@ -51,7 +54,11 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'black',
-    height: 100
+    height: 100,
+    borderColor: "red",
+    borderWidth: 1,
+    marginVertical: 20
+
   },
   text_button: {
     fontSize: 16,
@@ -61,7 +68,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   view_button: {
-    marginVertical : 200
+    marginVertical : 200,
+    //justifyContent: "space-between",
     
   }
 
